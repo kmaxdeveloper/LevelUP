@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Level UP</string>
     <style name="levelUp">LEVEL UP</style>
+    <string name="adInterstitialId">ca-app-pub-4664801446868642/9346796384</string>
+    <string name="adBannerId">ca-app-pub-4664801446868642/3547674791</string>
+    <string name="adAppodealId">dcfde437e9d4e6024ba0a5920a4fba7194165b558571dcac</string>
 </resources>

@@ -1,4 +1,4 @@
-package uz.kmax.levelup.memory
+package uz.kmax.levelup.tools
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
