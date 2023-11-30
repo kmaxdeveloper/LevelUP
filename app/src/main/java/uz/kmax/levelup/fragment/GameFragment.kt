@@ -30,7 +30,7 @@ class GameFragment : BaseFragmentWC<FragmentGameBinding>(FragmentGameBinding::in
         adsManager.setOnAdDismissClickListener {
             when (adType) {
                 0 -> {
-                    Toast.makeText(requireContext(), "Ads loaded", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Thanks you !", Toast.LENGTH_SHORT).show()
                 }
 
                 1 -> {
@@ -51,20 +51,8 @@ class GameFragment : BaseFragmentWC<FragmentGameBinding>(FragmentGameBinding::in
             Toast.makeText(requireContext(), "Thank you !", Toast.LENGTH_SHORT).show()
         }
 
-        adsManager.setOnAdsNotReadyListener { type ->
-            when (type) {
-                1 -> {
-                    Toast.makeText(requireContext(), "Ads not ready !", Toast.LENGTH_SHORT).show()
-                }
-
-                2 -> {
-                    adsManager.showInterstitialAds(requireActivity())
-                }
-
-                else -> {
-                    Toast.makeText(requireContext(), "Ads not Ready !", Toast.LENGTH_SHORT).show()
-                }
-            }
+        adsManager.setOnAdsNotReadyListener {
+            Toast.makeText(requireContext(), "Ads not ready", Toast.LENGTH_SHORT).show()
         }
 
         adsManager.setOnAdsNullListener {
@@ -104,7 +92,7 @@ class GameFragment : BaseFragmentWC<FragmentGameBinding>(FragmentGameBinding::in
 
         binding.boost2.setOnClickListener {
             adType = 2
-            adsManager.showAppodealAds(requireActivity())
+            adsManager.showInterstitialAds(requireActivity())
         }
 
         binding.boost3.setOnClickListener {
@@ -179,11 +167,6 @@ class GameFragment : BaseFragmentWC<FragmentGameBinding>(FragmentGameBinding::in
     override fun onResume() {
         super.onResume()
         adsManager.initializeInterstitialAds(requireContext(), getString(R.string.adInterstitialId))
-        adsManager.initializeAppodeal(
-            requireActivity(),
-            requireContext(),
-            getString(R.string.adAppodealId)
-        )
     }
 
     private fun auto() {

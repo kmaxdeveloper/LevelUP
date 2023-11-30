@@ -11,8 +11,8 @@ android {
         applicationId "uz.kmax.levelup"
         minSdk 24
         targetSdk 34
-        versionCode 4
-        versionName "1.4"
+        versionCode 5
+        versionName "1.4.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -47,5 +47,4 @@ dependencies {
     implementation 'com.github.kmaxdeveloper:BaseLibrary:1.1.2'
     implementation "com.airbnb.android:lottie:3.4.0"
     implementation 'com.google.android.gms:play-services-ads:21.5.0'
-    implementation 'com.appodeal.ads:sdk:3.0.2.+'
 }
